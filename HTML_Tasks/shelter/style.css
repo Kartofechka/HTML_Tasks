@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+    font-family: Georgia;
+}
+
+main{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.start-page{
+    background-image:
+        url(./assets/start_screen_lines.png),
+        url(./assets/start_screen_background.png); 
+}
+
+button{
+    margin: 40px 0;
+    padding: 15px 45px;
+    border-radius: 25px;
+    color: #292929;
+    background-color: #f1cdb3;
+    font-family: Georgia;
+    font-size: 17px;
+    border: none;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #fddcc4;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    margin: 0 auto;
+}
+
+header ul{
+    display: flex;
+    gap: 50px;
+}
+
+header li{
+    display: inline;
+    font-family: Arial;
+}
+
+header li a{
+    color:#CDCDCD
+}
+
+header li:hover{
+    text-decoration: underline;
+    text-decoration-color: #f1cdb3;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+}
+
+header li:hover a{
+    color:#fafafa;
+}
+
+.start-img img{
+    height: 728px;
+    width: 698px;
+}
+
+.start-text{
+    height: 322px;
+    flex: 1;
+    text-align: left;
+    position: relative;
+    top: -80px
+}
+
+.start-img{
+    flex: 1;
+    text-align: right;
+    padding: 50px 50px;
+}
+
+.container-start-text-png{
+    width: 1200px;
+    height: 728px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+h1{
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+h2{
+    font-size: 44px;
+    font-weight: normal;
+    margin: 30px 0;
+}
+
+p{
+    font-family: Arial;
+    font-size: 15px;
+    color: #cdcdcd;
+    text-align: justify;
+    margin: 20px 0;
+}
+
+.logo h1{
+    font-size: 32px;
+    color:#f1cdb3
+}
+
+.logo p{
+    font-family: Arial;
+    font-size: 13px;
+    color: #ffffff;
+    vertical-align: middle;
+    width: 179px;
+}
+
+.About-the-shelter {
+    max-height: 588px;
+    max-width: 1200px;
+    background-color: #ffffff;
+    color: #545454;
+    display: flex;
+    margin: 100px 150px;
+}
+
+.About-the-shelter h3, p{
+    color: #545454;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+h3 {
+    font-family: Georgia;
+    font-size: 35px;
+    padding: 20px 0;
+    font-weight: lighter;
+}
+
+.About-the-shelter img{
+    height: 408px;
+    width: 300px;
+}
+
+.container-about-text{
+    width: 430px;
+    height: 380px;
+    margin: 0 100px;
+}

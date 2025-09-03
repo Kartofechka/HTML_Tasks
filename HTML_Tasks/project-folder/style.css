@@ -1,0 +1,77 @@
+html, body{
+    font-family: 'Comfortaa';
+    margin: 0;
+    padding: 0;
+}
+body {
+    color:rgb(54, 127, 60);
+    font-size: 15px;
+    text-align:center;
+}
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: rebeccapurple;
+}
+h1{
+    color:deeppink;
+    font-size:45px;
+    font-weight:bold;
+    margin: 0;
+}
+h2 {
+    color: mediumpurple;
+    font-size: 30px;
+    font-weight: bold;
+}
+button{
+    background-color:darkred;
+    color:white;
+    padding: 15px 40px;
+    border-radius: 15px;
+}
+header {
+    background-color: wheat;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    
+}
+header li{
+    display: inline-block;
+}
+header ul{
+    list-style: none;
+    display:flex;
+    gap: 30px;
+}
+header img{
+    height:30px;
+    width:30px;
+}
+header nav {
+    font-size:20px;
+    text-align: center;
+    display: flex;
+    gap: 300px;
+}
+.css, footer{
+    background-color:wheat;
+}
+.html p, .css p, .js p {
+    max-width: 870px;
+    margin: 0 auto;
+    text-align: left;
+}
