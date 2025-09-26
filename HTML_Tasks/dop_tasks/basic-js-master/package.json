@@ -1,0 +1,30 @@
+{
+  "name": "basic-js",
+  "version": "1.0.0",
+  "description": "Tasks for mastering basics of JavaScript",
+  "main": "index.js",
+  "engines": {
+    "node": ">=22",
+    "npm": ">=10"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node --test --test-reporter tap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlreadyBored/basic-js.git"
+  },
+  "keywords": [
+    "node",
+    "tasks"
+  ],
+  "author": "AlreadyBored",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlreadyBored/basic-js/issues"
+  },
+  "homepage": "https://github.com/AlreadyBored/basic-js#readme"
+}
