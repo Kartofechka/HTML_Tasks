@@ -1,0 +1,26 @@
+{
+  "name": "brackets",
+  "version": "1.0.0",
+  "description": "Brackets",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint && mocha",
+    "lint": "node node_modules/eslint/bin/eslint.js ./src",
+    "lint:fix": "node node_modules/eslint/bin/eslint.js ./src --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/brackets.git"
+  },
+  "author": "max@shas.tel",
+  "license": "MIT",
+  "homepage": "https://github.com/rolling-scopes-school/brackets",
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "mocha": "^10.8.2",
+    "prettier": "^3.5.3"
+  }
+}
