@@ -69,11 +69,16 @@ function output() {
         changeBtn.onclick = () => changeTask(index);
 
         checkbox.addEventListener("click", (evt) => hide(evt, changeBtn), false);
+        
+        let task_buttons = document.createElement("div");
+        task_buttons.className = "task_buttons";
+
+        task_buttons.appendChild(deleteBtn);
+        task_buttons.appendChild(changeBtn);
 
         wrapper.appendChild(checkbox);
         wrapper.appendChild(label);
-        wrapper.appendChild(deleteBtn);
-        wrapper.appendChild(changeBtn);
+        wrapper.appendChild(task_buttons);
 
         container.appendChild(wrapper);
     });
@@ -86,11 +91,30 @@ function removeTask(index) {
 }
 
 function changeTask(index) {
-    let newTask = prompt("Введите новое значение задачи:", tasks[index]);
-    if (newTask !== null && newTask.trim() !== "") {
-        tasks[index] = newTask.trim();
-        output();
-    }
+    const container = document.getElementById("check_tasks");
+    const wrapper = container.children[index];
+    const label = wrapper.querySelector("label");
+
+    label.style.display = "none";
+
+    const inputField = document.createElement("input");
+    inputField.type = "text";
+    inputField.value = tasks[index];
+    inputField.className = "edit-input";
+
+    inputField.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+            const newValue = inputField.value.trim();
+            if (newValue !== "") {
+                tasks[index] = newValue;
+                saveTasks();
+                output();
+            }
+        }
+    });
+
+    wrapper.insertBefore(inputField, label.nextSibling);
+    inputField.focus();
 }
 
 function hide(evt, changeBtn) {

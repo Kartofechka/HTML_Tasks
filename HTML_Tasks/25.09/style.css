@@ -1,5 +1,8 @@
 body {
-    margin: 5vw;
+    background-color: #111;
+    color: #fff;
+    font-family: 'Press Start 2P', monospace;
+    padding: 20px;
 }
 
 .styles {
@@ -7,16 +10,15 @@ body {
 }
 
 button {
-    color: #ffffff;
-    background-color: #e94f08;
-    border: none;
-    border-radius: 7px;
-    width:  9vw;
-    height: 5vh;
-    transition-duration: 1s;
-    margin: 0.5vw;
-    font-family: 'Comfortaa';
-    font-size: large;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  background-color: #222;
+  color: #0ff;
+  border: 2px solid #0ff;
+  padding: 10px;
+  margin: 5px;
+  width: 4vw;
+  cursor: pointer;
 }
 
 .Red {
@@ -40,14 +42,41 @@ button {
 }
 
 button:hover {
-    cursor:cell;
-    background-color: #e91708;
+    background-color: #0ff;
+    color: #222;
 }
 
-input {
-    background-color: darkgrey;
-    border: none;
-    border-radius: 5px;
-    width: 10vw;
-    height: 4.5vh;
+input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 10px;
 }
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+#check_tasks div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #ff0;
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.task_buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: 50px; 
+  }
+  
+  .task_buttons button {
+    font-size: 12px;
+    padding: 6px 10px;
+    background-color: #222;
+    color: #0ff;
+    border: 2px solid #0ff;
+    cursor: pointer;
+  }
