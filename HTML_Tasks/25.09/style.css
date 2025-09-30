@@ -1,82 +1,115 @@
 body {
-    background-color: #111;
-    color: #fff;
+    background-color: #000;
+    color: #0ff;
     font-family: 'Press Start 2P', monospace;
     padding: 20px;
-}
-
-.styles {
-    margin: 2vw 0;
-}
-
-button {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 12px;
-  background-color: #222;
-  color: #0ff;
-  border: 2px solid #0ff;
-  padding: 10px;
-  margin: 5px;
-  width: 4vw;
-  cursor: pointer;
-}
-
-.Red {
-    background-color: rgb(255, 0, 0);
-}
-
-.Green {
-    background-color: green;
-}
-
-.Blue {
-    background-color: blue;
-}
-
-.Random {
-    background: linear-gradient(to right, #00FFA3, #DC1FFF);
-}
-
-.Input, .Show, .Add {
-    display: flex;
-}
-
-button:hover {
+    image-rendering: pixelated;
+  }
+  
+  button {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;
+    background-color: #111;
+    color: #0ff;
+    border: 4px solid #0ff;
+    padding: 10px;
+    margin: 5px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    box-shadow: 0 0 5px #0ff;
+    text-transform: uppercase;
+  }
+  
+  button:hover {
     background-color: #0ff;
-    color: #222;
-}
-
-input[type="checkbox"] {
-    transform: scale(1.5);
-    margin-right: 10px;
-}
-
-input:focus {
-    border: none;
+    color: #000;
+    border-color: #fff;
+    box-shadow: 0 0 10px #fff;
+  }
+  
+  .Red {
+    background-color: #f00;
+    color: #000;
+  }
+  
+  .Green {
+    background-color: #0f0;
+    color: #000;
+  }
+  
+  .Blue {
+    background-color: #00f;
+    color: #000000;
+  }
+  
+  .Random {
+    background: repeating-linear-gradient(
+      45deg,
+      #00FFA3,
+      #DC1FFF 10px,
+      #00FFA3 20px
+    );
+    color: #000;
+  }
+  
+  input[type="text"] {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;
+    background-color: #000;
+    color: #0f0;
+    border: 4px solid #f00;
+    padding: 10px;
+    width: 300px;
+    box-shadow: inset 0 0 10px #f00;
     outline: none;
-}
-
-#check_tasks div {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #0ff;
+    box-shadow: inset 0 0 15px #0ff;
+  }
+  
+  #check_tasks div {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 2px solid #ff0;
-    background-color: #333;
+    border: 4px solid #ff0;
+    background-color: #111;
     padding: 10px;
-    margin-bottom: 5px;
-}
-
-.task_buttons {
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px #ff0;
+  }
+  
+  .task_buttons {
     display: flex;
     gap: 10px;
-    margin-left: 50px; 
   }
   
   .task_buttons button {
-    font-size: 12px;
+    font-size: 10px;
     padding: 6px 10px;
-    background-color: #222;
+    background-color: #000;
     color: #0ff;
     border: 2px solid #0ff;
     cursor: pointer;
+    box-shadow: 0 0 5px #0ff;
   }
+  
+
+  .note {
+    background-color: #111;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border: 4px solid #fff;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;
+    cursor: grab;
+    width: fit-content;
+    box-shadow: 0 0 5px #fff;
+    text-transform: uppercase;
+  }
+  

@@ -122,3 +122,56 @@ function hide(evt, changeBtn) {
     changeBtn.style.visibility = "hidden";
   }
 
+
+
+
+let writes = (localStorage.getItem("writes") || "").split("|").filter(w => w.trim() !== "");
+
+function inputWrite() {
+    let note = document.getElementById("input_write").value.trim();
+    if (note !== "") {
+        writes.push(note);
+        document.getElementById("input_write").value = "";
+        saveWrites();
+        outputWrite();
+    }
+}
+  
+function saveWrites() {
+    localStorage.setItem("writes", writes.join("|"));
+}
+  
+function outputWrite() {
+    let container = document.getElementById("check_write");
+    container.innerHTML = "";
+  
+    writes.forEach((note, index) => {
+        let noteDiv = document.createElement("div");
+        noteDiv.textContent = note;
+        noteDiv.className = "note";
+        noteDiv.id = `note-${index}`;
+        noteDiv.draggable = true;
+  
+        noteDiv.addEventListener("dragstart", (e) => {
+            e.dataTransfer.setData("text/plain", e.target.id);
+        });
+  
+        container.appendChild(noteDiv);
+    });
+}
+  
+document.body.addEventListener("dragover", (e) => {
+    e.preventDefault();
+});
+  
+document.body.addEventListener("drop", (e) => {
+    e.preventDefault();
+    const draggedId = e.dataTransfer.getData("text/plain");
+    const draggedElement = document.getElementById(draggedId);
+  
+    draggedElement.style.position = "absolute";
+    draggedElement.style.left = `${e.pageX - draggedElement.offsetWidth / 2}px`;
+    draggedElement.style.top = `${e.pageY - draggedElement.offsetHeight / 2}px`;
+});
+  
+  

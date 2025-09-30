@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body id="body">
@@ -19,6 +19,12 @@
         <button class="Add" onclick="input()">Добавить задачу</button>
         <button class="Show" onclick="output()">Показать задачи</button>
         <div class="check_tasks" id="check_tasks"></div>
+    </div>
+    <div class="writes">
+        <input class="input_write" type="text" id="input_write">
+        <button class="add_write" onclick="inputWrite()">Добавить заметки</button>
+        <button class="show_write" onclick="outputWrite()">Показать заметки</button>
+        <div class="check_write" id="check_write" draggable="true"></div>
     </div>
     <script src="script.js"></script>
 </body>
