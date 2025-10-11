@@ -1,0 +1,125 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #F9F6F0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #2E2E2E;
+}
+
+.user_data {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.inputs {
+  background-color: #EAEAEA;
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inputs input, .inputs button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #FFBFAE;
+  color: #2E2E2E;
+}
+
+.inputs input::placeholder {
+  color: #555;
+}
+
+.inputs button {
+  background-color: #00C2A8;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.inputs button:hover {
+  background-color: #3A4F7A;
+}
+
+.send_btn {
+  background-color: #00C2A8;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+.send_btn:hover {
+  background-color: #3A4F7A;
+  transform: scale(1.05);
+}
+
+.choices {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #EAEAEA;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.choices h1 {
+  color: #3A4F7A;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.choices h2 {
+  margin-bottom: 10px;
+  color: #3A4F7A;
+}
+
+.choices input[type="text"], .choices input[type="radio"] {
+  margin-bottom: 15px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.radio_answer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.radio_answer label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.radio_answer input[type="radio"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.result {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.result h1 {
+  color: #00C2A8;
+}
