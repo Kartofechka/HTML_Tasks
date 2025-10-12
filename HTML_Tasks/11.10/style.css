@@ -1,6 +1,8 @@
-
 * {
   box-sizing: border-box;
+}
+
+body {
   margin: 0;
   padding: 0;
   background-color: #F9F6F0;
@@ -26,7 +28,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.inputs input, .inputs button {
+.inputs input {
   width: 100%;
   padding: 10px;
   font-size: 16px;
@@ -40,30 +42,26 @@
   color: #555;
 }
 
+.inputs input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #00C2A8;
+}
+
 .inputs button {
+  width: 100%;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
   background-color: #00C2A8;
   color: white;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .inputs button:hover {
-  background-color: #3A4F7A;
-}
-
-.send_btn {
-  background-color: #00C2A8;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.5s ease, transform 0.2s ease;
-  margin-top: 20px;
-}
-
-.send_btn:hover {
   background-color: #3A4F7A;
   transform: scale(1.05);
 }
@@ -75,26 +73,32 @@
   background-color: #EAEAEA;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .choices h1 {
   color: #3A4F7A;
-  margin-bottom: 20px;
   text-align: center;
 }
 
 .choices h2 {
-  margin-bottom: 10px;
   color: #3A4F7A;
+  margin-bottom: 10px;
 }
 
-.choices input[type="text"], .choices input[type="radio"] {
-  margin-bottom: 15px;
+.choices input[type="text"] {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
   width: 100%;
   background-color: #fff;
+}
+
+.choices input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #00C2A8;
 }
 
 .radio_answer {
@@ -108,12 +112,33 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 
 .radio_answer input[type="radio"] {
-  margin-right: 10px;
   transform: scale(1.2);
+  accent-color: #00C2A8;
 }
+
+#send_btn {
+  width: 100%;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00C2A8;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#send_btn:hover {
+  background-color: #3A4F7A;
+  transform: scale(1.05);
+}
+
 
 .result {
   margin-top: 30px;
@@ -123,3 +148,19 @@
 .result h1 {
   color: #00C2A8;
 }
+
+.answers p {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: #2E2E2E;
+  font-size: 16px;
+  line-height: 1.6;
+  white-space: pre-line; 
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: large;
+}
+

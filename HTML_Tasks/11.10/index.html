@@ -1,47 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Анкета</title>
 </head>
 <body>
-    <div id="user_data" class="user_data">
-        <div class="inputs">
-            <input id="name" type="text" placeholder="Имя">
-            <input id="password" type="password" placeholder="Пароль">
-            <input id="email" type="email" placeholder="Почта">
-            <button id="login_btn">Логин</button>
-        </div>
+
+  <div class="user_data" id="user_data">
+    <form class="inputs">
+      <input id="name" type="text" placeholder="Имя" required autocomplete="off">
+      <input id="password" type="password" placeholder="Пароль" required autocomplete="off">
+      <input id="email" type="email" placeholder="Почта" required>
+      <button id="login_btn" type="submit">Логин</button>
+    </form>
+  </div>
+
+  <div class="choices" id="choices">
+    <h1 id="choice_name"></h1>
+
+    <div class="first_question">
+      <h2>Вопрос 1</h2>
+      <input id="first_answer" type="text" placeholder="Ответ">
     </div>
-    <div id="choices" class="choices">
-        <h1 id="choice_name">Анкета</h1>
-        <div class="first_question">
-            <h2>Вопрос 1</h2>
-            <input id="first_answer" type="text" placeholder="Ответ">
-        </div>
-        <div class="second_question">
-            <h2>Вопрос 2</h2>
-            <input id="second_answer" type="text" placeholder="Ответ">
-        </div>
-        <div class="third_question">
-        <div class="third_answer">
-            <h2>Вопрос 3</h2>
-                <div class="radio_answer">
-                <label><input type="radio" name="third_answer" value="1"> Вариант 1</label>
-                <label><input type="radio" name="third_answer" value="2"> Вариант 2</label>
-                <label><input type="radio" name="third_answer" value="3"> Вариант 3</label>
-                </div>
-            </div>
-        </div>
-        <div class="send_btn">
-            <button id="send_btn">Send</button>
-        </div>
-        <div class="result">
-            <h1>Результат Name</h1>
-        </div>
+
+    <div class="second_question">
+      <h2>Вопрос 2</h2>
+      <input id="second_answer" type="text" placeholder="Ответ">
     </div>
-    <script src="script.js"></script>
+
+    <div class="third_question">
+      <h2>Вопрос 3</h2>
+      <div class="radio_answer">
+        <label><input type="radio" name="third_answer" value="1"> Вариант 1</label>
+        <label><input type="radio" name="third_answer" value="2"> Вариант 2</label>
+        <label><input type="radio" name="third_answer" value="3"> Вариант 3</label>
+      </div>
+    </div>
+
+    <button id="send_btn" type="button">Отправить</button>
+  </div>
+
+  <div class="result" id="result">
+    <h1 id="result_name"></h1>
+    <div class="answers">
+        <p id="answer"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
