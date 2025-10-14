@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content_container">
+        <div class="head_title">
+            <h2>Изменяй CSS через JS (Сам в шоке)</h2>
+        </div>
+        <div class="input_container">
+            <label>Задний фон: <input id="color_selector" type="color"></label>
+            <label>Размер фона: <input id="size_selector" type="range" min="0" max="20" value="0"></label>
+            <label>Блюр: <input id="blur_power" type="range" min="0" max="20" value="0"></label>
+        </div>
+        <div class="picture">
+            <div id="fon_container" class="fon_container">
+                <img src="picture.jpg">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
