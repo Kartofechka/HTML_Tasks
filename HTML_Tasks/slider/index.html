@@ -9,8 +9,22 @@
 <body>
     <div class="container">
         <div class="arrow"><button id="left">Left</button></div>
-        <div class="picture"><img id="image" src="1.jpg"></div>
+        <div class="picture">
+            <canvas id="drawing_picture" width="500" height="400" style="border:1px solid #000000;"></canvas>
+            <div class="info">
+                <button id="info">Info</button>
+                <p id="p_info"></p>
+                <button id="random">Random</button>
+            </div>
+        </div>
         <div class="arrow"><button id="right">Right</button></div>
+    </div>
+    <div class="drawer">
+        <div class="canvas_btns">
+            <input id="drawer_color" type="color">
+            <input id="drawer_width" type="range" name="width" min="0" max="15"> 
+            <button id="clear">Clear</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
