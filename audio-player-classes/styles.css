@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  font-family: 'Comfortaa', sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  font-size: 20px;
+}
+
+.player {
+  max-width: 420px;
+  margin: 40px auto;
+  background-color: #1c1c1c;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+  padding: 24px;
+  border: 1px solid #444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.track-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+.track-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.track-list li {
+  padding: 14px 18px;
+  border-bottom: 1px solid #444;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  color: #ddd;
+}
+
+.track-list li:hover {
+  background-color: #292929;
+  color: #fff;
+}
+
+.track-list li.active {
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: bold;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+#nowPlaying {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+.control-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btns button {
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 40px;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btns button:hover {
+  background-color: #ffe066;
+  transform: scale(1.05);
+}
+
+#toMenuBtn {
+  background-color: transparent;
+  font-size: 22px;
+  color: #aaa;
+  padding: 0 10px;
+}
+
+#toMenuBtn:hover {
+  color: #fff;
+}
+
+.btns label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin-top: 6px;
+  accent-color: #ffcc00;
+}
+
+.textarea {
+  margin-top: 40px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #555;
+  max-height: 320px;
+  overflow-y: auto;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #e0e0e0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+#addPlayerBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background: #4CAF50;  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
