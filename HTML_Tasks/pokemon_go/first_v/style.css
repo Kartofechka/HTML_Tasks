@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 2vw;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+#egg-div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+#egg-div p {
+  background-color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+#egg-div p:hover {
+  transform: scale(1.05);
+  background-color: #e0f7ff;
+}
+
+
+#pokemons-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 25px;
+  padding: 10px;
+}
+
+.pokemon-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  transition: transform 0.2s ease;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05);
+  background-color: #f0f8ff;
+}
