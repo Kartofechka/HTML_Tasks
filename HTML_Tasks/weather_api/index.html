@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погодный анализатор 3000 ультрапромакс</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Что по погоде?</h1>
+        
+        <div class="main-content">
+            <div class="input-section">
+                <div class="coord-inputs">
+                    <input type="text" id="latitude" placeholder="Широта (например: 55.7558)" class="coord-input">
+                    <input type="text" id="longitude" placeholder="Долгота (например: 37.6173)" class="coord-input">
+                </div>
+                <button id="getWeatherBtn" class="weather-btn">Показать погоду</button>
+
+                <div class="examples">
+                    <p>Примеры запросов:</p>
+                    <ul>
+                        <li>Минск: 53.9045, 27.5615</li>
+                        <li>Пинск: 52.1229, 26.0951</li>
+                        <li>Лида: 53.8887, 25.2847</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cities-section">
+                <h3>Популярные города:</h3>
+                <div class="cities-grid">
+                    <button class="city-btn" data-lat="53.9045" data-lon="27.5615">Минск</button>
+                    <button class="city-btn" data-lat="55.7558" data-lon="37.6173">Москва</button>
+                    <button class="city-btn" data-lat="53.6694" data-lon="23.8131">Гродно</button>
+                    <button class="city-btn" data-lat="52.0976" data-lon="23.7341">Брест</button>
+                    <button class="city-btn" data-lat="55.1848" data-lon="30.2016">Витебск</button>
+                    <button class="city-btn" data-lat="53.9007" data-lon="30.3310">Могилев</button>
+                    <button class="city-btn" data-lat="52.4345" data-lon="30.9754">Гомель</button>
+                    <button class="city-btn" data-lat="53.8887" data-lon="25.2847">Лида</button>
+                    <button class="city-btn" data-lat="52.1229" data-lon="26.0951">Пинск</button>
+                    <button class="city-btn" data-lat="43.1198" data-lon="131.8869">Владивосток</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="weatherInfo" class="weather-info hidden">
+            <div class="weather-header">
+                <h2 id="cityName" class="city-name"></h2>
+                <img id="weatherIcon" src="" alt="Погода" class="weather-icon">
+            </div>
+            <div class="weather-details">
+                <p class="temperature"><span id="temperature"></span>°C</p>
+                <p class="description" id="weatherDescription"></p>
+                <p class="details">Влажность: <span id="humidity"></span>%</p>
+                <p class="details">Ветер: <span id="windSpeed"></span> м/с</p>
+                <p class="details">Давление: <span id="pressure"></span> мбар</p>
+            </div>
+        </div>
+
+        <div id="errorMessage" class="error-message hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
