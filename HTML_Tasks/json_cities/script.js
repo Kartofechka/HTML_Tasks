@@ -51,9 +51,10 @@ function showCities() {
   const slice = currentResults.slice(0, currentIndex + 10);
   slice.forEach(place => {
     const people = Number(place.population).toLocaleString();
+    const state = place.state;
     const div = document.createElement('div');
     div.classList.add('city-card');
-    div.innerHTML = `<strong>${place.city}</strong>: ${people} burger eaters`;
+    div.innerHTML = `<strong>${place.city}</strong> | state: ${state}: ${people} burger eaters`;
     city_divs.appendChild(div);
   });
 
