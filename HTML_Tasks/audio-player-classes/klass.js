@@ -211,19 +211,82 @@ class Player {
   }
 }
 
-const tracks1 = [
+const allTracks = [
   { title: "Тайна", src: "songs/song1.mp3", author: "Кукрыниксы", text: "texts/text1.txt" },
   { title: "Над пропастью во ржи", src: "songs/song2.mp3", author: "Би-2", text: "texts/text2.txt" },
-  { title: "Добрые люди", src: "songs/song3.mp3", author: "Король и Шут", text: "texts/text3.txt" }
-];
-
-const tracks2 = [
+  { title: "Добрые люди", src: "songs/song3.mp3", author: "Король и Шут", text: "texts/text3.txt" },
   { title: "Message man", src: "songs/song4.mp3", author: "Twenty one pilots", text: "texts/text4.txt" },
   { title: "Crying Lightning", src: "songs/song5.mp3", author: "Arctic Monkeys", text: "texts/text5.txt" },
   { title: "Планы", src: "songs/song6.mp3", author: "Владимир Клявин", text: "texts/text6.txt" }
 ];
 
-function createNewPlayer(tracks = tracks1) {
+function showTrackSelection() {
+  const formContainer = document.createElement('div');
+  formContainer.className = 'track-selection-form';
+  formContainer.innerHTML = `
+    <div class="form-content">
+      <h3>Выберите композиции для плеера</h3>
+      <div class="track-options">
+        ${allTracks.map((track, index) => `
+          <div class="track-option">
+            <input type="checkbox" id="track-${index}" value="${index}" checked>
+            <label for="track-${index}">
+              <strong>${track.title}</strong> - ${track.author}
+            </label>
+          </div>
+        `).join('')}
+      </div>
+      <div class="form-buttons">
+        <button class="select-all-btn">Выбрать все</button>
+        <button class="deselect-all-btn">Снять все</button>
+        <button class="submit-tracks-btn">Создать плеер</button>
+        <button class="cancel-tracks-btn">Отмена</button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(formContainer);
+
+  const selectAllBtn = formContainer.querySelector('.select-all-btn');
+  const deselectAllBtn = formContainer.querySelector('.deselect-all-btn');
+  const submitBtn = formContainer.querySelector('.submit-tracks-btn');
+  const cancelBtn = formContainer.querySelector('.cancel-tracks-btn');
+
+  selectAllBtn.addEventListener('click', () => {
+    formContainer.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+      checkbox.checked = true;
+    });
+  });
+
+  deselectAllBtn.addEventListener('click', () => {
+    formContainer.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+      checkbox.checked = false;
+    });
+  });
+
+  submitBtn.addEventListener('click', () => {
+    const selectedTracks = [];
+    const checkedBoxes = formContainer.querySelectorAll('input[type="checkbox"]:checked');
+    
+    checkedBoxes.forEach(checkbox => {
+      const trackIndex = parseInt(checkbox.value);
+      selectedTracks.push(allTracks[trackIndex]);
+    });
+
+    if (selectedTracks.length > 0) {
+      createNewPlayer(selectedTracks);
+      document.body.removeChild(formContainer);
+    } else {
+      alert('Пожалуйста, выберите хотя бы одну композицию!');
+    }
+  });
+
+  cancelBtn.addEventListener('click', () => {
+    document.body.removeChild(formContainer);
+  });
+}
+
+function createNewPlayer(tracks) {
   const playersContainer = document.getElementById('playersContainer');
   const playerContainer = document.createElement('div');
   playerContainer.className = 'player-container';
@@ -234,9 +297,9 @@ function createNewPlayer(tracks = tracks1) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  createNewPlayer(tracks1);
+  createNewPlayer(allTracks);
+  
   document.getElementById('addPlayerBtn').addEventListener('click', () => {
-    const tracks = document.querySelectorAll('.player-container').length % 2 === 0 ? tracks1 : tracks2;
-    createNewPlayer(tracks);
+    showTrackSelection();
   });
 });

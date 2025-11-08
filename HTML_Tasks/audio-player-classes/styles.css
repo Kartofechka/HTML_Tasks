@@ -67,7 +67,7 @@ h2 {
   width: 100%;
 }
 
-#nowPlaying {
+.now-playing {
   text-align: center;
   font-size: 24px;
   font-weight: bold;
@@ -100,14 +100,14 @@ h2 {
   transform: scale(1.05);
 }
 
-#toMenuBtn {
+.to-menu-btn {
   background-color: transparent;
   font-size: 22px;
   color: #aaa;
   padding: 0 10px;
 }
 
-#toMenuBtn:hover {
+.to-menu-btn:hover {
   color: #fff;
 }
 
@@ -152,9 +152,98 @@ input[type="range"] {
   top: 20px;
   right: 20px;
   padding: 10px 15px;
-  background: #4CAF50;  color: white;
+  background: #4CAF50;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   z-index: 1000;
+}
+
+.track-selection-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.form-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  color: #000;
+}
+
+.track-options {
+  margin: 20px 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.track-option {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.track-option:hover {
+  background-color: #f5f5f5;
+}
+
+.track-option input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.track-option label {
+  cursor: pointer;
+  display: block;
+}
+
+.form-buttons {
+  margin-top: 15px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.select-all-btn, .deselect-all-btn, .submit-tracks-btn, .cancel-tracks-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.select-all-btn {
+  background: #2196F3;
+  color: white;
+}
+
+.deselect-all-btn {
+  background: #FF9800;
+  color: white;
+}
+
+.submit-tracks-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+.cancel-tracks-btn {
+  background: #f44336;
+  color: white;
 }
