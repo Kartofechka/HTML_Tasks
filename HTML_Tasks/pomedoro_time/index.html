@@ -5,21 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>El tomate</title>
 </head>
 <body>
     <div id="first-block">
-        <button id="pomodoro-button">Pomodoro</button>
-        <button id="lb-button">Long Break</button>
-        <button id="sb-button">Short Break</button>
+        <button id="pomodoro-button">El tomate</button>
+        <button id="lb-button">Я устал, босс</button>
+        <button id="sb-button">Cofe break</button>
     </div>
 
     <div id="time-block">
-        <div id="time-show"></div>
-        <button id="start-button">Start</button>
-        <button id="pause-button">Pause</button>
-        <button id="reset-button">Reset</button>
+        <div id="time-show">25 мин., 0 сек.</div>
+        <div class="time-buttons">
+            <button id="start-button">بِسْمِ اللَّهِ</button>
+            <button id="pause-button">Стоп, мне не приятно</button>
+            <button id="reset-button">Давай по новой</button>
+            <button id="skip-button">Надоело</button>
+        </div>
     </div>
+
+    <div id="todo-block">
+        <h3>Супер задачи</h3>
+        <input type="text" id="todo-input" placeholder="Новая задача">
+        <button id="add-todo">Добавить</button>
+        <ul id="todo-list"></ul>
+    </div>
+
     <script src="script.js"></script>
 </body>
+<footer>
+    El tomate, cuyo nombre científico es Solanum lycopersicum, es originario de la región occidental de América del Sur, de la zona andina. Las civilizaciones indígenas, como los aztecas y los incas, fueron las primeras en cultivarlo. Los aztecas lo llamaban «tomatl», de donde proviene el nombre moderno «tomate».
+    El tomate es conocido por sus propiedades beneficiosas para la salud. Es rico en vitaminas y minerales que apoyan el sistema inmunológico y la salud de la piel. La piel del tomate ayuda a la digestión, y las semillas contienen anticoagulantes que ayudan a prevenir la formación de coágulos sanguíneos. Además,
+    los fitoncidas en su pulpa ayudan a combatir bacterias. Desde un punto de vista botánico, el tomate es un fruto, ya que es la parte comestible que proviene de la flor y contiene semillas. Su color rojo vibrante no solo es atractivo, sino que también está relacionado con la presencia de licopenos, un antioxidante
+    poderoso. El triptófano, un aminoácido que el cuerpo convierte en serotonina, mejora el estado de ánimo y ayuda a regular los estados de ánimo.  
+</footer>
 </html>
