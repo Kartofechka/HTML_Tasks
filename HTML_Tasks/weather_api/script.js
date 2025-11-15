@@ -147,3 +147,29 @@ weatherBtn.addEventListener('click', () => {
     const lon = lonInput.value.trim();
     getWeather(lat, lon);
 });
+
+latInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        const lat = latInput.value.trim();
+        const lon = lonInput.value.trim();
+        getWeather(lat, lon);
+    }
+});
+
+lonInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        const lat = latInput.value.trim();
+        const lon = lonInput.value.trim();
+        getWeather(lat, lon);
+    }
+});
+
+cityBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const lat = btn.getAttribute('data-lat');
+        const lon = btn.getAttribute('data-lon');
+        latInput.value = lat;
+        lonInput.value = lon;
+        getWeather(lat, lon);
+    });
+});
