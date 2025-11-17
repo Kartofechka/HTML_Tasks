@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="title">2048</div>
+    <div class="score-wrap">
+      <div class="score">Счёт: <span id="score">0</span></div>
+      <div class="best">Лучший: <span id="best">0</span></div>
+    </div>
+  </header>
+
+  <div class="controls">
+    <button id="new-game">Новая игра</button>
+    <div class="hint">Управление стрелками на клавиатуре</div>
+  </div>
+
+  <div class="board" id="board">
+    <div class="cell" data-i="0"></div>
+    <div class="cell" data-i="1"></div>
+    <div class="cell" data-i="2"></div>
+    <div class="cell" data-i="3"></div>
+    <div class="cell" data-i="4"></div>
+    <div class="cell" data-i="5"></div>
+    <div class="cell" data-i="6"></div>
+    <div class="cell" data-i="7"></div>
+    <div class="cell" data-i="8"></div>
+    <div class="cell" data-i="9"></div>
+    <div class="cell" data-i="10"></div>
+    <div class="cell" data-i="11"></div>
+    <div class="cell" data-i="12"></div>
+    <div class="cell" data-i="13"></div>
+    <div class="cell" data-i="14"></div>
+    <div class="cell" data-i="15"></div>
+
+    <div class="message" id="message">
+      <div class="box">
+        <div id="message-text">Игра окончена!</div>
+        <div class="hint">Нажми «Новая игра», чтобы начать заново</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
