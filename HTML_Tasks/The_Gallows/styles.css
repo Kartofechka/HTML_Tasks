@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #bbb5a8;
+    font-family: 'Segoe UI', sans-serif;
+    color: #2E2E2E;
+    font-size: 20px;
+}
+
+#input_word{
+    margin: 5vw 0
+}
+
+#word_for_play{
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.2s ease;
+}
+
+
+#game{
+    margin: 5vw 0
+}
+
+button {
+    margin: 0.5vh;
+    width: 25px 25px;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #c25e00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #cfbba8;
+  transform: scale(1.05);
+}
+
+
+.bad_button {
+    background-color: #c20000;
+}
+
+.good_button{
+    background-color: #3dc200;
+}
+
+#results{
+    margin: 5vw 0
+}
+
+.input_word {
+    margin: 20px;
+}
+
+#word_for_play {
+    padding: 8px;
+    font-size: 16px;
+}
+
+#to_game_btn, #new_game {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.Game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#answer {
+    font-size: 32px;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+}
+
+#under_section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+#gallows {
+    width: 200px;
+    height: 250px;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    background-color: #fff;
+}
+
+#latters {
+    display: grid;
+    grid-template-columns: repeat(6, 50px);
+    gap: 10px;
+    max-width: 350px;
+}
+
+#latters button:hover {
+    background-color: #ddd;
+}
+
+#results {
+    display: flex;              
+    flex-direction: column;     
+    align-items: center;        
+    justify-content: center;
+    gap: 20px;                  
+    font-size: 20px;
+    padding: 20px;
+    background: #fdfdfd;
+    border: 2px solid #333;
+    border-radius: 10px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#res_text {
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+}
+
+#gallows_img {
+    max-width: 200px;
+    height: auto;
+    border: 2px solid #555;
+    border-radius: 5px;
+    background: #fff;
+    padding: 5px;
+}
+
+#new_game {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#new_game:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+

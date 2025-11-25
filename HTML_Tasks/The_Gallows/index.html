@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>The Gallows</title>
+</head>
+<body>
+    <div class="input_word" id="input_word">
+        <h1>Виселица</h1>
+        <h3>Введите слово для игры</h3>
+        <input id="word_for_play">
+        <button id="to_game_btn">Начать игру</button>
+    </div>
+    <div class="Game" id="Game" style="display: none">
+        <div id="answer">
+        </div>
+        
+        <div id="under_section">
+            <div id="gallows">
+                <img id="gallows_img" src="assets/stage_0.png">
+            </div>
+
+            <div id="latters">
+                <button>А</button>
+                <button>Б</button>
+                <button>В</button>
+                <button>Г</button>
+                <button>Д</button>
+                <button>Е</button>
+                <button>Ж</button>
+                <button>З</button>
+                <button>И</button>
+                <button>Й</button>
+                <button>К</button>
+                <button>Л</button>
+                <button>М</button>
+                <button>Н</button>
+                <button>О</button>
+                <button>П</button>
+                <button>Р</button>
+                <button>С</button>
+                <button>Т</button>
+                <button>У</button>
+                <button>Ф</button>
+                <button>Х</button>
+                <button>Ц</button>
+                <button>Ч</button>
+                <button>Ш</button>
+                <button>Щ</button>
+                <button>Ъ</button>
+                <button>Ы</button>
+                <button>Ь</button>
+                <button>Э</button>
+                <button>Ю</button>
+                <button>Я</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="results" style="display: none">
+        <div id="res_text"></div>
+        <img id="gallows_img" src="assets/stage_10.png">
+        <button id="new_game">Начать новую игру</button>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
