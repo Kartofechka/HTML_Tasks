@@ -45,7 +45,7 @@ button {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
+button:not(:disabled):hover {
   background-color: #cfbba8;
   transform: scale(1.05);
 }
@@ -58,6 +58,12 @@ button:hover {
 .good_button{
     background-color: #3dc200;
 }
+
+button:disabled:hover {
+  transform: none;
+  cursor: not-allowed;
+}
+
 
 #results{
     margin: 5vw 0
@@ -159,14 +165,14 @@ button:hover {
     font-weight: bold;
     border: none;
     border-radius: 5px;
-    background: #4CAF50;
+    background: #c25e00;
     color: white;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
 }
 
 #new_game:hover {
-    background: #45a049;
+    background: #cfbba8;
     transform: scale(1.05);
 }
 

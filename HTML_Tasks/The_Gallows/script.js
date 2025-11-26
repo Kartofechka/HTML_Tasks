@@ -2,6 +2,7 @@ const wordInput = document.getElementById("word_for_play");
 const startBtn = document.getElementById("to_game_btn");
 const answerDiv = document.getElementById("answer");
 const gallowsImg = document.getElementById("gallows_img");
+const gallowsImgRes = document.getElementById("gallows_img_res");
 const lettersDiv = document.getElementById("latters");
 const resultText = document.getElementById("res_text");
 const newGameBtn = document.getElementById("new_game");
@@ -25,7 +26,8 @@ const gallowsStages = [
     "assets/stage_7.png",
     "assets/stage_8.png",
     "assets/stage_9.png",
-    "assets/stage_10.png"
+    "assets/stage_10.png",
+    "assets/stage_win.png"
 ];
 
 startBtn.addEventListener("click", () => {
@@ -53,6 +55,7 @@ lettersDiv.addEventListener("click", (e) => {
     e.target.disabled = true;
 
     if (secretWord.includes(letter)) {
+        e.target.classList.add("good_button")
         secretWord.split("").forEach((ch, i) => {
             if (ch === letter) {
                 displayWord[i] = letter;
@@ -64,9 +67,10 @@ lettersDiv.addEventListener("click", (e) => {
             resultText.textContent = "Победа!";
             resultsDiv.style.display = "block";
             gameDiv.style.display = "none";
+            gallowsImgRes.src = gallowsStages[11]
         }
     } else {
-
+        e.target.classList.add("bad_button")
         wrongAttempts++;
         gallowsImg.src = gallowsStages[wrongAttempts];
 
