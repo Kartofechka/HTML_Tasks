@@ -68,6 +68,10 @@ lettersDiv.addEventListener("click", (e) => {
             resultsDiv.style.display = "block";
             gameDiv.style.display = "none";
             gallowsImgRes.src = gallowsStages[11]
+            Array.from(lettersDiv.querySelectorAll("button")).forEach(btn => {
+                btn.disabled = true;
+                btn.classList.remove("good_button", "bad_button")
+            });
         }
     } else {
         e.target.classList.add("bad_button")
@@ -78,6 +82,7 @@ lettersDiv.addEventListener("click", (e) => {
             resultText.textContent = `Повесили! Загаданное слово: ${secretWord}`;
             Array.from(lettersDiv.querySelectorAll("button")).forEach(btn => {
                 btn.disabled = true;
+                btn.classList.remove("good_button", "bad_button")
             });
             resultsDiv.style.display = "block";
             gameDiv.style.display = "none";
