@@ -7,6 +7,7 @@ import Page1 from "./components/Page1";
 import Page2 from "./components/Page2";
 import Page3 from "./components/Page3";
 import Autorisation from "./components/autorisation";
+import Game2048 from "./components/Game";
 
 import chatsData from "../src/data_base/chats.json";
 
