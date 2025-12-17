@@ -1,0 +1,79 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  font-family: "Inter", sans-serif;
+  color: #fff; 
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  padding: 2em;
+  background-color: #262626;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ffa500;
+  color: #1a1a1a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+button:hover {
+  background-color: #ff7f00;
+  transform: translateY(-2px);
+}
+button:active {
+  transform: translateY(0);
+}
+
+input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ffa500;
+  background-color: #333;
+  color: #fff;
+  outline: none;
+  transition: border 0.3s;
+}
+input:focus {
+  border-color: #ff7f00;
+}
+
+
+.films-container {
+  display: flex;
+  flex-direction: row; 
+  gap: 20px;        
+  overflow-x: auto;    
+  padding: 20px;
+}
+
+.film-card {
+  flex: 0 0 auto; 
+  width: 200px;
+  background-color: #262626;
+  border-radius: 12px;
+  padding: 16px;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+  text-align: center;
+}
+.film-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
