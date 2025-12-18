@@ -1,0 +1,65 @@
+.film-page {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  background-color: #121212;
+  color: #fff;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+.film-poster img {
+  width: 10rep;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+
+.film-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffa500;
+  margin-bottom: 12px;
+}
+
+.film-meta {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 8px;
+}
+
+.film-rating {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.film-details p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.film-synopsis {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #eee;
+}
+
+.film-links {
+  margin-top: 20px;
+}
+
+.film-links a {
+  color: #ffa500;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 12px;
+  transition: color 0.3s;
+}
+
+.film-links a:hover {
+  color: #ff7f00;
+}
+
