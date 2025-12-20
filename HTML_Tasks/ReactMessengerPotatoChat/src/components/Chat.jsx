@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from "react";
+import "../assets/chatStyles.css";
 
-export default function Chat({ chatId, chats, addMessage, currentUser }) {
+export default function Chat({ chatId, chats, addMessage, currentUser, autoMessage }) {
   const [input, setInput] = useState("");
-  const messagesEndRef = useRef(null);
+  const messagesContainerRef = useRef(null);
 
   const sendMessage = () => {
     if (!input.trim()) return;
@@ -11,61 +12,51 @@ export default function Chat({ chatId, chats, addMessage, currentUser }) {
   };
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    const container = messagesContainerRef.current;
+    if (container) {
+      container.scrollTo({
+        top: container.scrollHeight,
+        behavior: "smooth",
+      });
+    }
   }, [chats[chatId].messages]);
 
+  useEffect(() => {
+    if (!autoMessage) return;
+
+    const timer = setTimeout(() => {
+      const otherUser = chatId.split("!").find((u) => u !== currentUser);
+      addMessage(chatId, otherUser, autoMessage);
+    }, 120000);
+
+    return () => clearTimeout(timer);
+  }, [chatId, currentUser, addMessage, autoMessage]);
+
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        height: "calc(100vh - 77px)",
-        backgroundColor: "#111",
-        color: "#fff",
-      }}
-    >
-      <div
-        style={{
-          flex: 1,
-          overflowY: "auto",
-          padding: "10px",
-          scrollbarWidth: "none",
-          msOverflowStyle: "none", 
-        }}
-        className="messages-container"
-      >
-        {chats[chatId].messages.map((msg, i) => (
-          <div key={i} style={{ marginBottom: "6px" }}>
-            <b style={{ color: currentUser === msg.from ? "orange" : "#ccc" }}>
-              {currentUser === msg.from ? "Я" : msg.from}:
-            </b>{" "}
-            <span style={{ color: "#e9e2e2ff" }}>{msg.text}</span>{" "}
-            <span style={{ color: "gray" }}>({msg.time})</span>
-          </div>
-        ))}
-        <div ref={messagesEndRef} />
+    <div className="chat-container">
+      <div className="messages-container" ref={messagesContainerRef}>
+        {chats[chatId].messages.map((msg, i) => {
+          const isMine = currentUser === msg.from;
+          return (
+            <div key={i} className={`message-block ${isMine ? "mine" : "other"}`}>
+              <div className="message-author">{isMine ? "Я" : msg.from}</div>
+              <div className="message-bubble">
+                <span>{msg.text}</span>
+                <div className="message-time">{msg.time}</div>
+              </div>
+            </div>
+          );
+        })}
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          gap: "8px",
-          padding: "10px",
-          borderTop: "1px solid #333",
-          backgroundColor: "#222",
-          flexShrink: 0,
-        }}
-      >
+      <div className="input-container">
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Введите сообщение..."
-          style={{ flex: 1 }}
           onKeyDown={(e) => e.key === "Enter" && sendMessage()}
         />
-        <button onClick={sendMessage} style={{ background: "#375A7f", color: "#fff" }}>
-          Отправить
-        </button>
+        <button onClick={sendMessage}>Отправить</button>
       </div>
     </div>
   );

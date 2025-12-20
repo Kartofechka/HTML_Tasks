@@ -40,6 +40,7 @@ export default function Page1({ chats, addMessage, currentUser }) {
             chats={chats}
             addMessage={addMessage}
             currentUser={currentUser}
+            autoMessage={"Сообщение через 2 минутка"}
           />
         ) : (
           <p>Выберите чат слева</p>

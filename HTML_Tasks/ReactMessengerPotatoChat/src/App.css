@@ -22,3 +22,13 @@ body {
 a, .nav-link {
   color: #ffffff !important;
 }
+
+.navbar-brand, .nav-item{
+  margin: 5px;
+  border-radius: 0.5rem;
+  transition: background-color 0.5s ease;
+}
+
+.navbar-brand:hover, .nav-item:hover{
+  background-color: #375A7f;
+}

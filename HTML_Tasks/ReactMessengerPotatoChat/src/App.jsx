@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { HashRouter, NavLink, Routes, Route } from "react-router-dom";
 import "bootswatch/dist/darkly/bootstrap.min.css";
 import "./App.css";
@@ -7,7 +7,7 @@ import Page1 from "./components/Page1";
 import Page2 from "./components/Page2";
 import Page3 from "./components/Page3";
 import Autorisation from "./components/autorisation";
-import Game2048 from "./components/Game";
+
 
 import chatsData from "../src/data_base/chats.json";
 
@@ -17,9 +17,16 @@ function getChatId(userId1, userId2) {
 }
 
 function App() {
-  const [chats, setChats] = useState(chatsData);
+  const [chats, setChats] = useState(() => {
+    const saved = localStorage.getItem("chats");
+    return saved ? JSON.parse(saved) : chatsData;
+  });
   const [isAuthorized, setIsAuthorized] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
+
+  useEffect(() => {
+    localStorage.setItem("chats", JSON.stringify(chats));
+  }, [chats]);
 
   const addChat = (userId1, userId2) => {
     const chatId = getChatId(userId1, userId2);
